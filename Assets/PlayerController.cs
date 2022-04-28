@@ -20,11 +20,11 @@ public class PlayerController : MonoBehaviour
 	public GunManager gunManager;
 	public GameUIManager uiManager;
 	public int hp = 100;
-
 	// Use this for initialization
 	void Start()
 	{
 		animatorController = this.GetComponent<Animator>();
+		
 	}
 
 	public void Hit(int value)
@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 		if (Input.GetMouseButton(0))

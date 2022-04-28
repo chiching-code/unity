@@ -16,11 +16,7 @@ public class GameUIManager : MonoBehaviour
 	{
 		BlackCover.color = Color.black;
 		DOTween.To(() => BlackCover.color, (x) => BlackCover.color = x, new Color(0, 0, 0, 0), 1f);
-		//GameObject goTxtCoin = GameObject.Find("TxtCoin");
-		//if (goTxtCoin)
-		//{
-		//	txtCoin = goTxtCoin.GetComponent<Text>();
-		//}
+		
 	}
 
 	Tweener tweenAnimation;
@@ -56,6 +52,6 @@ public class GameUIManager : MonoBehaviour
 	}
 	public void SetCoin(int coinNum)
 	{
-		TxtCoin.text = "Coin:" + coinNum;//num.ToString();
+		TxtCoin.text = "Treasure:" + coinNum;//num.ToString();
 	}
 }

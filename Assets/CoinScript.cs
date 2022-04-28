@@ -5,24 +5,21 @@ using UnityEngine;
 public class CoinScript : MonoBehaviour
 {
 
-    public Transform target;
-    public bool isMove = false;
     public GameUIManager gameUI;
     public int coinNum = 0;
     
 
     void Update()
     {
-        
-        gameUI.SetCoin(coinNum);
-
+        print(coinNum);
+        //gameUI.SetCoin(coinNum);
     }
     
 
-    void onCollisionEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        coinNum++;
-        if (other.gameObject.tag == "Player")
+        print(coinNum);
+        if (other.gameObject.tag == "getCoin")
         {
             coinNum++;
             Destroy(gameObject);
